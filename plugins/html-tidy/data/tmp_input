@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes">
+
+	<xsl:import href="copy.xslt"/>
+
+	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+	
+    <xsl:variable name="levels" select="'Bigcity-1Ikon', 'Bigcity-Subhead', 'Bigcity-Smallheader'"/>
+    
+    <xsl:template match="Root">
+        <xsl:copy>
+        <xsl:call-template name="process-group">
+  		    <xsl:with-param name="input" select="*"/>
+  		    <xsl:with-param name="level" select="1"/>
+        </xsl:call-template>
+        </xsl:copy>
+    </xsl:template>
+    
+	<xsl:template name="process-group">
+		<xsl:param name="input" as="element()*"/>
+		<xsl:param name="level" as="xs:integer"/>    
+        
+        <xsl:for-each-group select="$input" group-starting-with="*[name()=$levels[$level]]">
+            <xsl:choose>
+                <xsl:when test="name()=$levels[$level]">
+                    <xsl:element name="Category">
+                        <xsl:apply-templates select="."/>
+                        <xsl:call-template name="process-group">
+				                  <xsl:with-param name="input" select="current-group()[position()!=1]"/>
+				                  <xsl:with-param name="level" select="$level+1"/>
+                        </xsl:call-template>
+                    </xsl:element>                    
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="current-group()"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each-group>
+<!--        </xsl:copy>-->
+	</xsl:template>
+
+</xsl:stylesheet>

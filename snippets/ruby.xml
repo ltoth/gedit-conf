@@ -1,0 +1,900 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="ruby">
+<snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_INLINE}form_tag(${1::action => "${5:update}"}${6:, {:${8:class} => "${9:form}"\}}) do${RAILS_TEMPLATE_END_RUBY_EXPR}
+  $0
+${RAILS_TEMPLATE_END_RUBY_BLOCK}]]></text>
+   <description>form_tag</description>
+   <tag>ft</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}Fixtures.identify(:${1:name})${RAILS_TEMPLATE_END_RUBY_EXPR}$0]]></text>
+   <description>&lt;%= Fixtures.identify(:symbol) %&gt;</description>
+   <tag>fi</tag>
+</snippet><snippet>
+   <text><![CDATA[after_create ]]></text>
+   <description>after_create</description>
+   <tag>aftc</tag>
+</snippet><snippet>
+   <text><![CDATA[after_destroy ]]></text>
+   <description>after_destroy</description>
+   <tag>aftd</tag>
+</snippet><snippet>
+   <text><![CDATA[after_save ]]></text>
+   <description>after_save</description>
+   <tag>afts</tag>
+</snippet><snippet>
+   <text><![CDATA[after_update ]]></text>
+   <description>after_update</description>
+   <tag>aftu</tag>
+</snippet><snippet>
+   <text><![CDATA[after_validation_on_create ]]></text>
+   <description>after_validation_on_create</description>
+   <tag>aftvoc</tag>
+</snippet><snippet>
+   <text><![CDATA[after_validation_on_update ]]></text>
+   <description>after_validation_on_update</description>
+   <tag>aftvou</tag>
+</snippet><snippet>
+   <text><![CDATA[after_validation ]]></text>
+   <description>after_validation</description>
+   <tag>aftv</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_difference "${1:Model}.${2:count}", ${3:1} do
+  $0
+end]]></text>
+   <description>assert_difference</description>
+   <tag>asd</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_no_difference "${1:Model}.${2:count}" do
+  $0
+end]]></text>
+   <description>assert_no_difference</description>
+   <tag>asnd</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_redirected_to ${10:${2:parent}_${3:child}_path(${4:@}${5:${2}})}]]></text>
+   <description>assert_redirected_to (nested path plural)</description>
+   <tag>artnpp</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_redirected_to ${2:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})}]]></text>
+   <description>assert_redirected_to (nested path)</description>
+   <tag>artnp</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_redirected_to ${10:${2:model}s_path}]]></text>
+   <description>assert_redirected_to (path plural)</description>
+   <tag>artpp</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_redirected_to ${2:${12:model}_path(${13:@}${14:${12}})}]]></text>
+   <description>assert_redirected_to (path)</description>
+   <tag>artp</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_rjs :${1:replace}, ${2:"${3:dom id}"}]]></text>
+   <description>assert_rjs</description>
+   <tag>asrj</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_select '${1:path}'${2:, :${3:text} => ${4:'${5:inner_html}'}}${6: do
+	$0
+end}]]></text>
+   <description>assert_select</description>
+   <tag>ass</tag>
+</snippet><snippet>
+   <text><![CDATA[assert(${1:var} = assigns(:${1}), "Cannot find @${1}")
+$0]]></text>
+   <description>assert(var = assigns(:var))</description>
+   <tag>asg</tag>
+</snippet><snippet>
+   <text><![CDATA[before_create ]]></text>
+   <description>before_create</description>
+   <tag>befc</tag>
+</snippet><snippet>
+   <text><![CDATA[before_destroy ]]></text>
+   <description>before_destroy</description>
+   <tag>befd</tag>
+</snippet><snippet>
+   <text><![CDATA[before_save ]]></text>
+   <description>before_save</description>
+   <tag>befs</tag>
+</snippet><snippet>
+   <text><![CDATA[before_update ]]></text>
+   <description>before_update</description>
+   <tag>befu</tag>
+</snippet><snippet>
+   <text><![CDATA[before_validation_on_create ]]></text>
+   <description>before_validation_on_create</description>
+   <tag>befvoc</tag>
+</snippet><snippet>
+   <text><![CDATA[before_validation_on_update]]></text>
+   <description>before_validation_on_update</description>
+   <tag>befvou</tag>
+</snippet><snippet>
+   <text><![CDATA[before_validation ]]></text>
+   <description>before_validation</description>
+   <tag>befv</tag>
+</snippet><snippet>
+   <text><![CDATA[belongs_to :${1:object}${2:, :class_name => "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", :foreign_key => "${4:${1}_id}"}]]></text>
+   <description>belongs_to</description>
+   <tag>bt</tag>
+</snippet><snippet>
+   <text><![CDATA[cattr_accessor :${0:attr_names}]]></text>
+   <description>cattr_accessor</description>
+   <tag>crw</tag>
+</snippet><snippet>
+   <text><![CDATA[t.binary :${1:title}${2:, :limit => ${3:2}.megabytes}
+$0]]></text>
+   <description>Table column binary</description>
+   <tag>tcbi</tag>
+</snippet><snippet>
+   <text><![CDATA[t.boolean :${1:title}
+$0]]></text>
+   <description>Table column boolean</description>
+   <tag>tcb</tag>
+</snippet><snippet>
+   <text><![CDATA[class ${1:Model}Controller < ApplicationController
+	before_filter :find_${2:model}
+
+	$0
+
+	private
+	def find_${2}
+		@$2 = ${3:$1}.find(params[:id]) if params[:id]
+	end
+end]]></text>
+   <description>Create controller class</description>
+   <tag>cla</tag>
+</snippet><snippet>
+   <text><![CDATA[t.date :${1:title}
+$0]]></text>
+   <description>Table column date</description>
+   <tag>tcda</tag>
+</snippet><snippet>
+   <text><![CDATA[t.datetime :${1:title}
+$0]]></text>
+   <description>Table column datetime</description>
+   <tag>tcdt</tag>
+</snippet><snippet>
+   <text><![CDATA[t.decimal :${1:title}${2:${3:, :precision => ${4:10}}${5:, :scale => ${6:2}}}
+$0]]></text>
+   <description>Table column decimal</description>
+   <tag>tcd</tag>
+</snippet><snippet>
+   <text><![CDATA[t.float :${1:title}
+$0]]></text>
+   <description>Table column float</description>
+   <tag>tcf</tag>
+</snippet><snippet>
+   <text><![CDATA[require File.dirname(__FILE__) + '/../test_helper'
+
+class ${1:Model}ControllerTest < ActionController::TestCase
+	deft$0
+end
+]]></text>
+   <description>Create functional test class</description>
+   <tag>cla</tag>
+</snippet><snippet>
+   <text><![CDATA[t.integer :${1:title}
+$0]]></text>
+   <description>Table column integer</description>
+   <tag>tci</tag>
+</snippet><snippet>
+   <text><![CDATA[t.integer :lock_version, :null => false, :default => 0
+$0]]></text>
+   <description>Table column lock_version</description>
+   <tag>tcl</tag>
+</snippet><snippet>
+   <text><![CDATA[t.references :${1:taggable}${2:, :polymorphic => ${3:{ :default => '${4:Photo}' \}}}
+$0]]></text>
+   <description>Table column(s) references</description>
+   <tag>tcr</tag>
+</snippet><snippet>
+   <text><![CDATA[t.string :${1:title}
+$0]]></text>
+   <description>Table column string</description>
+   <tag>tcs</tag>
+</snippet><snippet>
+   <text><![CDATA[t.text :${1:title}
+$0]]></text>
+   <description>Table column text</description>
+   <tag>tct</tag>
+</snippet><snippet>
+   <text><![CDATA[t.time :${1:title}
+$0]]></text>
+   <description>Table column time</description>
+   <tag>tcti</tag>
+</snippet><snippet>
+   <text><![CDATA[t.timestamp :${1:title}
+$0]]></text>
+   <description>Table column timestamp</description>
+   <tag>tcts</tag>
+</snippet><snippet>
+   <text><![CDATA[t.timestamps
+$0]]></text>
+   <description>Table column timestamps</description>
+   <tag>tctss</tag>
+</snippet><snippet>
+   <text><![CDATA[def create
+	@${1:model} = ${2:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}.new(params[:$1])
+	$0
+	respond_to do |wants|
+		if @$1.save
+			flash[:notice] = '$2 was successfully created.'
+			wants.html { redirect_to(@$1) }
+			wants.xml { render :xml => @$1, :status => :created, :location => @$1 }
+		else
+			wants.html { render :action => "new" }
+			wants.xml { render :xml => @$1.errors, :status => :unprocessable_entity }
+		end
+	end
+end
+]]></text>
+   <description>def create - resource</description>
+   <tag>defcreate</tag>
+</snippet><snippet>
+   <text><![CDATA[def test_should_get_${1:action}
+	${2:@${3:model} = ${4:$3s}(:${5:fixture_name})
+	}get :${1}${6:, :id => @$3.to_param}
+	assert_response :success
+	$0
+end]]></text>
+   <description>def test_should_get_action</description>
+   <tag>deftg</tag>
+</snippet><snippet>
+   <text><![CDATA[def test_should_post_${1:action}
+	${3:@$2 = ${4:$2s}(:${5:fixture_name})
+	}post :${1}${6:, :id => @$2.to_param}, :${2:model} => { $0 }
+	assert_response :redirect
+
+end]]></text>
+   <description>def test_should_post_action</description>
+   <tag>deftp</tag>
+</snippet><snippet>
+   <text><![CDATA[<% end -%>]]></text>
+   <description>end (ERB)</description>
+   <tag>end</tag>
+</snippet><snippet>
+   <text><![CDATA[find(:all${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})]]></text>
+   <description>find(:all)</description>
+   <tag>fina</tag>
+</snippet><snippet>
+   <text><![CDATA[find(:first${1:, :conditions => ['${2:${3:field} = ?}', ${5:true}]})]]></text>
+   <description>find(:first)</description>
+   <tag>finf</tag>
+</snippet><snippet>
+   <text><![CDATA[find(${1:id})]]></text>
+   <description>find(id)</description>
+   <tag>fini</tag>
+</snippet><snippet>
+   <text><![CDATA[<% if !${1:list}.blank? %>
+  <% for ${2:item} in ${1} %>
+    $3
+  <% end %>
+<% else %>
+  $4
+<% end %>
+]]></text>
+   <description>for loop in rhtml</description>
+   <tag>for</tag>
+</snippet><snippet>
+   <text><![CDATA[<% if !${1:list}.blank? %>
+  <% for ${2:item} in ${1} %>
+    $3
+  <% end %>
+<% else %>
+  $4
+<% end %>
+]]></text>
+   <description>for loop (ERB)</description>
+   <tag>for</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.check_box :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for check_box</description>
+   <tag>ffcb</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.check_box :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.check_box (ffcb)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.file_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for file_field</description>
+   <tag>ffff</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.file_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.file_field (ffff)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.hidden_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for hidden_field</description>
+   <tag>ffhf</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.hidden_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.hidden_field (ffhf)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.label :${1:attribute}${2:, "${3:${1/[[:alpha:]]+|(_)/(?1: :\u$0)/g}}"}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for label</description>
+   <tag>ffl</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.label :${1:attribute}${2:, "${3:${1/[[:alpha:]]+|(_)/(?1: :\u$0)/g}}"}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.label (ffl)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.password_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for password_field</description>
+   <tag>ffpf</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.password_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.password_field (ffpf)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.radio_box :${1:attribute}, :${2:tag_value}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for radio_box</description>
+   <tag>ffrb</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.radio_box :${1:attribute}, :${2:tag_value}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.radio_box (ffrb)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.submit "${1:Submit}"${2:, :disable_with => '${3:$1ing...}'}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for submit</description>
+   <tag>ffs</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.submit "${1:Submit}"${2:, :disable_with => '${3:$1ing...}'}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.submit (ffs)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.text_area :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for text_area</description>
+   <tag>ffta</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.text_area :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.text_area (ffta)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.text_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>form_for text_field</description>
+   <tag>fftf</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}f.text_field :${1:attribute}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>f.text_field (fftf)</description>
+   <tag>f.</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_INLINE}form_for @${1:model} do |f|${RAILS_TEMPLATE_END_RUBY_INLINE}
+  $0
+${RAILS_TEMPLATE_END_RUBY_BLOCK}]]></text>
+   <description>form_for</description>
+   <tag>ff</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}error_messages_for :${1:model}${RAILS_TEMPLATE_END_RUBY_EXPR}
+
+${RAILS_TEMPLATE_START_RUBY_INLINE}form_for @${2:$1} do |f|${RAILS_TEMPLATE_END_RUBY_INLINE}
+  $0
+${RAILS_TEMPLATE_END_RUBY_BLOCK}]]></text>
+   <description>form_for with errors</description>
+   <tag>ffe</tag>
+</snippet><snippet>
+   <text><![CDATA[has_and_belongs_to_many :${1:object}${2:, :join_table => "${3:table_name}", :foreign_key => "${4:${1}_id}"}]]></text>
+   <description>has_and_belongs_to_many</description>
+   <tag>habtm</tag>
+</snippet><snippet>
+   <text><![CDATA[has_many :${1:object}s${2:, :class_name => "${1}", :foreign_key => "${4:reference}_id"}]]></text>
+   <description>has_many</description>
+   <tag>hm</tag>
+</snippet><snippet>
+   <text><![CDATA[has_many :${1:objects}, :through => :${2:join_association}${3:, :source => :${4:${2}_table_foreign_key_to_${1}_table}}]]></text>
+   <description>has_many (through)</description>
+   <tag>hmt</tag>
+</snippet><snippet>
+   <text><![CDATA[has_one :${1:object}${2:, :class_name => "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", :foreign_key => "${4:${1}_id}"}]]></text>
+   <description>has_one</description>
+   <tag>ho</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}image_submit_tag("${1:agree.png}"${2:${3:, :id => "${4:${1/^(\w+)(\.\w*)?$/$1/}}"}${5:, :name => "${6:${1/^(\w+)(\.\w*)?$/$1/}}"}${7:, :class => "${8:${1/^(\w+)(\.\w*)?$/$1/}-button}"}${9:, :disabled => ${10:false}}})${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>image_submit_tag</description>
+   <tag>ist</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}javascript_include_tag ${1::all}${2:, :cache => ${3:true}}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>javascript_include_tag</description>
+   <tag>jit</tag>
+</snippet><snippet>
+   <text><![CDATA[\$LABEL]]></text>
+   <description>$LABEL</description>
+   <tag>$L</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to "${1:link text...}", :action => "${2:edit}", :id => ${3:@item}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (action, id)</description>
+   <tag>liai</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to "${1:link text...}", :action => "${2:index}"${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (action)</description>
+   <tag>lia</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to "${1:link text...}", :controller => "${2:items}", :action => "${3:edit}", :id => ${4:@item}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (controller, action, id)</description>
+   <tag>licai</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to "${1:link text...}", :controller => "${2:items}", :action => "${3:index}"${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (controller, action)</description>
+   <tag>lica</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to "${1:link text...}", :controller => "${2:items}"${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (controller)</description>
+   <tag>lic</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to ${1:model}.${2:name}, ${3:${4:$1}_path(${14:$1})}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to model</description>
+   <tag>lim</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to ${1:"${2:link text...}"}, ${3:${10:parent}_${11:child}_path(${12:@}${13:${10}})}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (nested path plural)</description>
+   <tag>linpp</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to ${1:"${2:link text...}"}, ${3:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (nested path)</description>
+   <tag>linp</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to ${1:"${2:link text...}"}, ${2:${10:model}s_path}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (path plural)</description>
+   <tag>lipp</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}link_to ${1:"${2:link text...}"}, ${3:${12:model}_path(${13:@}${14:${12}})}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>link_to (path)</description>
+   <tag>lip</tag>
+</snippet><snippet>
+   <text><![CDATA[logger.debug { "${1:message}" }$0]]></text>
+   <description>logger.debug</description>
+   <tag>logd</tag>
+</snippet><snippet>
+   <text><![CDATA[logger.error { "${1:message}" }$0]]></text>
+   <description>logger.error</description>
+   <tag>loge</tag>
+</snippet><snippet>
+   <text><![CDATA[logger.fatal { "${1:message}" }$0]]></text>
+   <description>logger.fatal</description>
+   <tag>logf</tag>
+</snippet><snippet>
+   <text><![CDATA[logger.info { "${1:message}" }$0]]></text>
+   <description>logger.info</description>
+   <tag>logi</tag>
+</snippet><snippet>
+   <text><![CDATA[logger.warn { "${1:message}" }$0]]></text>
+   <description>logger.warn</description>
+   <tag>logw</tag>
+</snippet><snippet>
+   <text><![CDATA[map(&:${1:id})]]></text>
+   <description>map(&amp;:sym_proc)</description>
+   <tag>mp</tag>
+</snippet><snippet>
+   <text><![CDATA[${1:map}.catch_all "*${2:anything}", :controller => "${3:default}", :action => "${4:error}"
+]]></text>
+   <description>map.catch_all</description>
+   <tag>mapca</tag>
+</snippet><snippet>
+   <text><![CDATA[${1:map}.${2:connect} '${3::controller/:action/:id}']]></text>
+   <description>map.named_route</description>
+   <tag>map</tag>
+</snippet><snippet>
+   <text><![CDATA[${1:map}.resources :${2:resource}${10: do |${11:$2}|
+  $0
+end}]]></text>
+   <description>map.resources</description>
+   <tag>maprs</tag>
+</snippet><snippet>
+   <text><![CDATA[${1:map}.resource :${2:resource}${10: do |${11:$2}|
+  $0
+end}]]></text>
+   <description>map.resource</description>
+   <tag>mapr</tag>
+</snippet><snippet>
+   <text><![CDATA[${1:map}.with_options :${2:controller} => '${3:thing}' do |${4:$3}|
+	$0
+end
+]]></text>
+   <description>map.with_options</description>
+   <tag>mapwo</tag>
+</snippet><snippet>
+   <text><![CDATA[mattr_accessor :${0:attr_names}]]></text>
+   <description>mattr_accessor</description>
+   <tag>mrw</tag>
+</snippet><snippet>
+   <text><![CDATA[t.column ${1:title}, :${2:string}
+mccc$0]]></text>
+   <description>Create Several Columns in Table</description>
+   <tag>mccc</tag>
+</snippet><snippet>
+   <text><![CDATA[t.column ${1:title}, :${2:string}
+$0]]></text>
+   <description>Create Column in Table</description>
+   <tag>mcol</tag>
+</snippet><snippet>
+   <text><![CDATA[drop_table :${1:table}${2: [press tab twice to generate create_table]}]]></text>
+   <description>Drop / Create Table</description>
+   <tag>mtab</tag>
+</snippet><snippet>
+   <text><![CDATA[remove_column :${1:table}, :${2:column}${3: [press tab twice to generate add_column]}]]></text>
+   <description>Remove / Add Column</description>
+   <tag>mcol</tag>
+</snippet><snippet>
+   <text><![CDATA[page.hide ${1:"${2:id(s)}"}]]></text>
+   <description>page.hide (*ids)</description>
+   <tag>hide</tag>
+</snippet><snippet>
+   <text><![CDATA[page.insert_html :${1:top}, ${2:"${3:id}"}, :${4:partial => "${5:template}"}]]></text>
+   <description>page.insert_html (position, id, partial)</description>
+   <tag>ins</tag>
+</snippet><snippet>
+   <text><![CDATA[page.replace_html ${1:"${2:id}"}, :${3:partial => "${4:template}"}]]></text>
+   <description>page.replace_html (id, partial)</description>
+   <tag>reph</tag>
+</snippet><snippet>
+   <text><![CDATA[page.replace ${1:"${2:id}"}, :${3:partial => "${4:template}"}]]></text>
+   <description>page.replace (id, partial)</description>
+   <tag>rep</tag>
+</snippet><snippet>
+   <text><![CDATA[page.show ${1:"${2:id(s)}"}]]></text>
+   <description>page.show (*ids)</description>
+   <tag>show</tag>
+</snippet><snippet>
+   <text><![CDATA[page.toggle ${1:"${2:id(s)}"}]]></text>
+   <description>page.toggle (*ids)</description>
+   <tag>tog</tag>
+</snippet><snippet>
+   <text><![CDATA[page.visual_effect :${1:toggle_slide}, ${2:"${3:DOM ID}"}]]></text>
+   <description>page.visual_effect (effect, id)</description>
+   <tag>vis</tag>
+</snippet><snippet>
+   <text><![CDATA[page.visual_effect :${1:toggle_slide}, ${2:"${3:DOM ID}"}]]></text>
+   <description>page.visual_effect (effect, id)</description>
+   <tag>vis</tag>
+</snippet><snippet>
+   <text><![CDATA[page.visual_effect :${1:toggle_slide}, ${2:"${3:DOM ID}"}]]></text>
+   <description>page.visual_effect (effect, id)</description>
+   <tag>vis</tag>
+</snippet><snippet>
+   <text><![CDATA[RAILS_DEFAULT_LOGGER.debug "${1:message}"$0]]></text>
+   <description>RAILS_DEFAULT_LOGGER.debug</description>
+   <tag>rdb</tag>
+</snippet><snippet>
+   <text><![CDATA[flash[:${1:notice}] = "${2:Successfully created...}"$0]]></text>
+   <description>flash[…]</description>
+   <tag>flash</tag>
+</snippet><snippet>
+   <text><![CDATA[params[:${1:id}]]]></text>
+   <description>params[…]</description>
+</snippet><snippet>
+   <text><![CDATA[session[:${1:user}]]]></text>
+   <description>session[…]</description>
+</snippet><snippet>
+   <text><![CDATA[session[:${1:user}]]]></text>
+   <description>session[…]</description>
+</snippet><snippet>
+   <text><![CDATA[session[:${1:user}]]]></text>
+   <description>session[…]</description>
+</snippet><snippet>
+   <text><![CDATA[session[:${1:user}]]]></text>
+   <description>session[…]</description>
+</snippet><snippet>
+   <text><![CDATA[redirect_to :action => "${1:show}", :id => ${0:@item}]]></text>
+   <description>redirect_to (action, id)</description>
+   <tag>reai</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to :action => "${1:index}"]]></text>
+   <description>redirect_to (action)</description>
+   <tag>rea</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to :controller => "${1:items}", :action => "${2:show}", :id => ${0:@item}]]></text>
+   <description>redirect_to (controller, action, id)</description>
+   <tag>recai</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to :controller => "${1:items}", :action => "${2:list}"]]></text>
+   <description>redirect_to (controller, action)</description>
+   <tag>reca</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to :controller => "${1:items}"]]></text>
+   <description>redirect_to (controller)</description>
+   <tag>rec</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to(${2:${10:parent}_${11:child}_path(${12:@}${13:${10}})})]]></text>
+   <description>redirect_to (nested path plural)</description>
+   <tag>renpp</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to(${2:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})})]]></text>
+   <description>redirect_to (nested path)</description>
+   <tag>renp</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to(${2:${10:model}s_path})]]></text>
+   <description>redirect_to (path plural)</description>
+   <tag>repp</tag>
+</snippet><snippet>
+   <text><![CDATA[redirect_to(${2:${12:model}_path(${13:@}${14:${12}})})]]></text>
+   <description>redirect_to (path)</description>
+   <tag>rep</tag>
+</snippet><snippet>
+   <text><![CDATA[render :action => "${1:action}", :layout => "${2:layoutname}"]]></text>
+   <description>render (action, layout)</description>
+   <tag>ral</tag>
+</snippet><snippet>
+   <text><![CDATA[render :action => "${1:action}"]]></text>
+   <description>render (action)</description>
+   <tag>ra</tag>
+</snippet><snippet>
+   <text><![CDATA[render :file => "${1:filepath}"]]></text>
+   <description>render (file)</description>
+   <tag>rf</tag>
+</snippet><snippet>
+   <text><![CDATA[render :file => "${1:filepath}", :use_full_path => ${2:false}]]></text>
+   <description>render (file, use_full_path)</description>
+   <tag>rfu</tag>
+</snippet><snippet>
+   <text><![CDATA[render :inline => "${1:<%= 'hello' %>}", :locals => { ${2::name} => "${3:value}"$4 }]]></text>
+   <description>render (inline, locals)</description>
+   <tag>ril</tag>
+</snippet><snippet>
+   <text><![CDATA[render :inline => "${1:<%= 'hello' %>}"]]></text>
+   <description>render (inline)</description>
+   <tag>ri</tag>
+</snippet><snippet>
+   <text><![CDATA[render :inline => "${1:<%= 'hello' %>}", :type => ${2::rxml}]]></text>
+   <description>render (inline, type)</description>
+   <tag>rit</tag>
+</snippet><snippet>
+   <text><![CDATA[render :layout => "${1:layoutname}"]]></text>
+   <description>render (layout)</description>
+   <tag>rl</tag>
+</snippet><snippet>
+   <text><![CDATA[render :nothing => ${1:true}]]></text>
+   <description>render (nothing)</description>
+   <tag>rn</tag>
+</snippet><snippet>
+   <text><![CDATA[render :nothing => ${1:true}, :status => ${2:401}]]></text>
+   <description>render (nothing, status)</description>
+   <tag>rns</tag>
+</snippet><snippet>
+   <text><![CDATA[render :partial => "${1:item}", :collection => ${2:@$1s}]]></text>
+   <description>render (partial, collection)</description>
+   <tag>rpc</tag>
+</snippet><snippet>
+   <text><![CDATA[render :partial => "${1:item}", :locals => { :${2:$1} => ${3:@$1}$0 }]]></text>
+   <description>render (partial, locals)</description>
+   <tag>rpl</tag>
+</snippet><snippet>
+   <text><![CDATA[render :partial => "${1:item}", :object => ${2:@$1}]]></text>
+   <description>render (partial, object)</description>
+   <tag>rpo</tag>
+</snippet><snippet>
+   <text><![CDATA[render :partial => "${1:item}"]]></text>
+   <description>render (partial)</description>
+   <tag>rp</tag>
+</snippet><snippet>
+   <text><![CDATA[render :partial => "${1:item}", :status => ${2:500}]]></text>
+   <description>render (partial, status)</description>
+   <tag>rps</tag>
+</snippet><snippet>
+   <text><![CDATA[render :text => "${1:text to render...}", :layout => ${2:true}]]></text>
+   <description>render (text, layout =&gt; true)</description>
+   <tag>rtlt</tag>
+</snippet><snippet>
+   <text><![CDATA[render :text => "${1:text to render...}", :layout => "${2:layoutname}"]]></text>
+   <description>render (text, layout)</description>
+   <tag>rtl</tag>
+</snippet><snippet>
+   <text><![CDATA[render :text => "${1:text to render...}"]]></text>
+   <description>render (text)</description>
+   <tag>rt</tag>
+</snippet><snippet>
+   <text><![CDATA[render :text => "${1:text to render...}", :status => ${2:401}]]></text>
+   <description>render (text, status)</description>
+   <tag>rts</tag>
+</snippet><snippet>
+   <text><![CDATA[render :update do |${2:page}|
+	$2.$0
+end]]></text>
+   <description>render (update)</description>
+   <tag>ru</tag>
+</snippet><snippet>
+   <text><![CDATA[respond_to do |wants|
+	wants.html do
+		$TM_SELECTED_TEXT
+	end
+	wants.${1:js} { $0 }
+end]]></text>
+   <description>respond_to (html)</description>
+</snippet><snippet>
+   <text><![CDATA[respond_to do |wants|
+	wants.${1:html}${2: { $0 \}}
+end]]></text>
+   <description>respond_to</description>
+   <tag>rest</tag>
+</snippet><snippet>
+   <text><![CDATA[returning ${1:variable} do${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1: |)/}${2:v}${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1:|)/}
+	$0
+end]]></text>
+   <description>returning do |variable| … end</description>
+   <tag>returning</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}stylesheet_link_tag {1::all}${2:, :cache => ${3:true}}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>stylesheet_link_tag</description>
+   <tag>slt</tag>
+</snippet><snippet>
+   <text><![CDATA[${RAILS_TEMPLATE_START_RUBY_EXPR}submit_tag "${1:Save changes}"${2:, :id => "${3:submit}"}${4:, :name => "${5:$3}"}${6:, :class => "${7:form_$3}"}${8:, :disabled => ${9:false}}${10:, :disable_with => "${11:Please wait...}"}${RAILS_TEMPLATE_END_RUBY_EXPR}]]></text>
+   <description>submit_tag</description>
+   <tag>st</tag>
+</snippet><snippet>
+   <text><![CDATA[t.binary :${1:title}${2:, :limit => ${3:2}.megabytes}
+t.$0]]></text>
+   <description>t.binary (tcbi)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.boolean :${1:title}
+t.$0]]></text>
+   <description>t.boolean (tcb)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.date :${1:title}
+t.$0]]></text>
+   <description>t.date (tcda)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.datetime :${1:title}
+t.$0]]></text>
+   <description>t.datetime (tcdt)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.decimal :${1:title}${2:${3:, :precision => ${4:10}}${5:, :scale => ${6:2}}}
+t.$0]]></text>
+   <description>t.decimal (tcd)</description>
+   <tag>t.</tag>
+</snippet><snippet/><snippet>
+   <text><![CDATA[assert_redirected_to ${2::action => "${1:index}"}]]></text>
+   <description>assert_redirected_to</description>
+   <tag>art</tag>
+</snippet><snippet>
+   <text><![CDATA[assert_response :${1:success}, @response.body$0]]></text>
+   <description>assert_response</description>
+   <tag>asre</tag>
+</snippet><snippet>
+   <text><![CDATA[t.float :${1:title}
+t.$0]]></text>
+   <description>t.float (tcf)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.integer :${1:title}
+t.$0]]></text>
+   <description>t.integer (tci)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.integer :lock_version, :null => false, :default => 0
+t.$0]]></text>
+   <description>t.lock_version (tcl)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.references :${1:taggable}${2:, :polymorphic => ${3:{ :default => '${4:Photo}' \}}}
+t.$0]]></text>
+   <description>t.references (tcr)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.string :${1:title}
+t.$0]]></text>
+   <description>t.string (tcs)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.text :${1:title}
+t.$0]]></text>
+   <description>t.text (tct)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.timestamps
+t.$0]]></text>
+   <description>t.timestamps (tctss)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.timestamp :${1:title}
+t.$0]]></text>
+   <description>t.timestamp (tcts)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[t.time :${1:title}
+t.$0]]></text>
+   <description>t.time (tcti)</description>
+   <tag>t.</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_associated :${1:attribute}${2:, :on => :${3:create}, :if => proc { |obj| ${5:obj.condition?} }}]]></text>
+   <description>validates_associated if</description>
+   <tag>vaif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_associated :${1:attribute}${2:, :on => :${3:create}}]]></text>
+   <description>validates_associated</description>
+   <tag>va</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_confirmation_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:should match confirmation}", :if => proc { |obj| ${5:obj.condition?} }}]]></text>
+   <description>validates_confirmation_of if</description>
+   <tag>vcif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_confirmation_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:should match confirmation}"}]]></text>
+   <description>validates_confirmation_of</description>
+   <tag>vc</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_exclusion_of :${1:attribute}${2:, :in => ${3:%w( ${4:mov avi} )}, :on => :${5:create}, :message => "${6:extension %s is not allowed}"}, :if => proc { |obj| ${7:obj.condition?} }}]]></text>
+   <description>validates_exclusion_of if</description>
+   <tag>veif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_exclusion_of :${1:attribute}${2:, :in => ${3:%w( ${4:mov avi} )}, :on => :${5:create}, :message => "${6:extension %s is not allowed}"}]]></text>
+   <description>validates_exclusion_of</description>
+   <tag>ve</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_format_of :${1:attribute}, :with => /${2:^[${3:\w\d}]+\$}/${4:, :on => :${5:create}, :message => "${6:is invalid}"}, :if => proc { |obj| ${7:obj.condition?} }}]]></text>
+   <description>validates_format_of if</description>
+   <tag>vfif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_format_of :${1:attribute}, :with => /${2:^[${3:\w\d}]+\$}/${4:, :on => :${5:create}, :message => "${6:is invalid}"}]]></text>
+   <description>validates_format_of</description>
+   <tag>vf</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_inclusion_of :${1:attribute}${2:, :in => ${3:%w( ${4:mov avi} )}, :on => :${5:create}, :message => "${6:extension %s is not included in the list}"}, :if => proc { |obj| ${7:obj.condition?} }}]]></text>
+   <description>validates_inclusion_of if</description>
+   <tag>viif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_inclusion_of :${1:attribute}${2:, :in => ${3:%w( ${4:mov avi} )}, :on => :${5:create}, :message => "${6:extension %s is not included in the list}"}]]></text>
+   <description>validates_inclusion_of</description>
+   <tag>vi</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_length_of :${1:attribute}, :within => ${2:3..20}${3:, :on => :${4:create}, :message => "${5:must be present}"}, :if => proc { |obj| ${6:obj.condition?} }}]]></text>
+   <description>validates_length_of if</description>
+   <tag>vlif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_length_of :${1:attribute}, :within => ${2:3..20}${3:, :on => :${4:create}, :message => "${5:must be present}"}]]></text>
+   <description>validates_length_of</description>
+   <tag>vl</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_numericality_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:is not a number}"}, :if => proc { |obj| ${5:obj.condition?} }}]]></text>
+   <description>validates_numericality_of if</description>
+   <tag>vnif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_numericality_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:is not a number}"}]]></text>
+   <description>validates_numericality_of</description>
+   <tag>vn</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_presence_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:can't be blank}"}, :if => proc { |obj| ${5:obj.condition?} }}]]></text>
+   <description>validates_presence_of if</description>
+   <tag>vpif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_presence_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:can't be blank}"}]]></text>
+   <description>validates_presence_of</description>
+   <tag>vp</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_uniqueness_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:must be unique}", :if => proc { |obj| ${6:obj.condition?} }}]]></text>
+   <description>validates_uniqueness_of if</description>
+   <tag>vuif</tag>
+</snippet><snippet>
+   <text><![CDATA[validates_uniqueness_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:must be unique}"}]]></text>
+   <description>validates_uniqueness_of</description>
+   <tag>vu</tag>
+</snippet><snippet>
+   <text><![CDATA[verify :only => [:$1], :session => :user, :params => :id, :redirect_to => {:action => '${2:index}'}
+]]></text>
+   <description>verify — redirect</description>
+   <tag>verify</tag>
+</snippet><snippet>
+   <text><![CDATA[verify :only => [:$1], :method => :post, :render => {:status => 500, :text => "use HTTP-POST"}
+]]></text>
+   <description>verify — render</description>
+   <tag>verify</tag>
+</snippet><snippet>
+   <text><![CDATA[wants.${1:js|xml|html}${2: { $0 \}}]]></text>
+   <description>wants.format</description>
+   <tag>wants</tag>
+</snippet><snippet>
+   <text><![CDATA[xhr :delete, :${1:destroy}, :id => ${2:1}$0]]></text>
+   <description>xhr delete</description>
+   <tag>xdelete</tag>
+</snippet><snippet>
+   <text><![CDATA[xhr :get, :${1:show}${2:, :id => ${3:1}}$0]]></text>
+   <description>xhr get</description>
+   <tag>xget</tag>
+</snippet><snippet>
+   <text><![CDATA[xhr :post, :${1:create}, :${2:object} => { $3 }]]></text>
+   <description>xhr post</description>
+   <tag>xpost</tag>
+</snippet><snippet>
+   <text><![CDATA[xhr :put, :${1:update}, :id => ${2:1}, :${3:object} => { $4 }$0]]></text>
+   <description>xhr put</description>
+   <tag>xput</tag>
+</snippet>
+</snippets>

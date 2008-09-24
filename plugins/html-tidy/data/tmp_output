@@ -1,0 +1,22 @@
+line 2 column 1 - Error: <xsl:stylesheet> is not recognized!
+line 2 column 1 - Warning: missing <!DOCTYPE> declaration
+line 2 column 1 - Warning: discarding unexpected <xsl:stylesheet>
+line 4 column 9 - Error: <xsl:import> is not recognized!
+line 4 column 9 - Warning: discarding unexpected <xsl:import>
+line 6 column 9 - Error: <xsl:output> is not recognized!
+line 6 column 9 - Warning: discarding unexpected <xsl:output>
+line 8 column 5 - Error: <xsl:variable> is not recognized!
+line 8 column 5 - Warning: discarding unexpected <xsl:variable>
+line 10 column 5 - Error: <xsl:template> is not recognized!
+line 10 column 5 - Warning: discarding unexpected <xsl:template>
+line 11 column 9 - Error: <xsl:copy> is not recognized!
+35 warnings, 22 errors were found! Not all warnings/errors were shown.
+
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please fill bug reports and queries using the "tracker" on the Tidy web site.
+Additionally, questions can be sent to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium
