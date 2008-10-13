@@ -1,0 +1,9 @@
+[Gedit Plugin]
+Loader=python
+Module=netsave
+IAge=2
+Name=Remote File System Save Hack
+Description=For people who want to use gedit to edit files on remote filesystems but don't want to see that pesky 'file has been modified since being read'  warning every minute.
+Authors=Chris nicholls
+Copyright=Copyright © 2008 Chris Nicholls
+Website=http://chrisnicholls.ca

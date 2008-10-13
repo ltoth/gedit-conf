@@ -1,0 +1,6 @@
+This repository should be cloned to ~/.gnome2/gedit.
+
+Extra configuration steps:
+
+* Turn on desired plugins in Edit -> Preferences -> Plugins
+* For Rails mime-types

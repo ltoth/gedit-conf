@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
- Copyright (C) 2006-2007 GtkSourceView team
- Author: Luigi Maselli <luigix_@t_gmail_com>
+ Copyright (C) 2008 Matthew Swasey <matt.swasey@viget.com>
 
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
@@ -20,13 +19,10 @@
  Boston, MA 02111-1307, USA.
 
 -->
-<style-scheme id="darkmate" _name="Darkmate" version="1.0">
-  <author>Luigi Maselli</author>
-  <_description>Color scheme Darkmate, for dark backgrounds</_description>
+<style-scheme id="vibrant_fun" _name="Vibrant Fun" version="1.0">
+  <author>Matt Swasey</author>
+  <_description>A hack of vibrant ink</_description>
 
-<!--
-        Colors from the Darkmate palette. See it in action on http://grigio.org/files/darkmate.png
--->
   <color name="gray" value="#bbbbbb"/>
   <color name="white" value="#eeeeee"/>
   <color name="yellow" value="#fce94f"/>
@@ -35,16 +31,16 @@
   <color name="green" value="#00c900"/>
   <color name="alga" value="#00c99b"/>
   <color name="aqua" value="#00d8ff"/>
-  <color name="cyan" value="#009cff"/>
+  <color name="cyan" value="#66BDE3"/>
   <color name="violet" value="#9e91ff"/>
   <color name="purple" value="#bb66ff"/>
   <color name="fuchsia" value="#ff44cc"/>
   <color name="magenta" value="#ff79d9"/>
   <color name="red" value="#ff2f6a"/>
-  <color name="orange" value="#ff6100"/>
+  <color name="orange" value="#FF872E"/>
   <color name="ambra" value="#ff9900"/>
   <color name="asfalto" value="#555753"/>
-  <color name="carbon" value="#232323"/>
+  <color name="carbon" value="#3b3b3b"/>
 
 <!--
         GUI styles 
