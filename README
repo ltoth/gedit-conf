@@ -4,3 +4,8 @@ Extra configuration steps:
 
 * Turn on desired plugins in Edit -> Preferences -> Plugins
 * For Rails mime-types
+
+sudo cp rails.xml /usr/share/mime/packages/
+sudo cp *.lang /usr/share/gtksourceview-2.0/language-specs/
+sudo update-mime-database /usr/share/mime
+
