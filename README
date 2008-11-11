@@ -3,12 +3,51 @@ This repository should be cloned to ~/.gnome2/gedit.
 Extra configuration steps:
 
 * Install gedit-plugins through apt-get
+* Select the following settings
+	* View
+		* Display line number
+		* Highlight current line
+		* Highlight matching bracket
+	* Editor
+		* Tab width: 2 (but don't enable Insert spaces instead of tabs because of elastictabstops plugin)
+		* Enable automatic indentation
+	* Font & Colors
+		* Color Scheme: Railscasts
 * Turn on desired plugins in Edit -> Preferences -> Plugins
+	* Class Browser
+	* Code comment
+	* Document Statistics
+	* Edit shortcuts (add Ctrl+Shift+N - open in new window)
+	* Elastic tabstops
+	* Elastic tabstop converter
+	* Embedded Terminal
+	* External Tools
+	* File Browser Pane
+	* Find In Files
+	* HTML Tidy
+	* Indent Lines
+	* Join/Split Lines
+	* Line Tools
+	* Modelines
+	* Quick Highlight Mode
+	* Rails Extract Partial
+	* Rails Hot Commands
+	* Rails Hotkeys
+	* Regex Search and Replace
+	* Remote File System Save Hack
+	* Save without trailing space
+	* Session Saver
+	* Show/Hide Tabbar
+	* Smart Indent
+	* Snap Open
+	* Snippets
+	* Spell Checker
+	* Text Tools
+	* Word Completion
+* Set smaller pixel widths for Elastic Tabstops
+	gconftool-2 --type int --set /apps/gedit-2/plugins/elastictabstops/minimumwidth 15
+	gconftool-2 --type int --set /apps/gedit-2/plugins/elastictabstops/paddingwidth 10
 * For Rails mime-types
-
-sudo cp rails.xml /usr/share/mime/packages/
-sudo cp *.lang /usr/share/gtksourceview-2.0/language-specs/
-sudo update-mime-database /usr/share/mime
-
-gconftool-2 --type int --set /apps/gedit-2/plugins/elastictabstops/minimumwidth 15
-gconftool-2 --type int --set /apps/gedit-2/plugins/elastictabstops/paddingwidth 10
+	sudo cp rails.xml /usr/share/mime/packages/
+	sudo cp *.lang /usr/share/gtksourceview-2.0/language-specs/
+	sudo update-mime-database /usr/share/mime
