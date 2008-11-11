@@ -13,10 +13,11 @@ DIR=$GEDIT_CURRENT_DOCUMENT_DIR
 while test "$DIR" != "/"; do
     if [ -d "${DIR}/.git" ]; then
         echo "Using repository ${DIR}" | sed "s#$EHOME#~#" > /dev/stderr
-        git-cola --repo=$DIR &
+        git-cola --repo=$DIR > /dev/null &
         exit
     fi
     DIR=`dirname "${DIR}"`
 done
 echo "No git repository found!" > /dev/stderr
+
 
