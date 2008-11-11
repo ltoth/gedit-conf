@@ -22,6 +22,10 @@
     <glob pattern="*.rake"/>
   </mime-type>
   <mime-type type="application/x-ruby">
+    <comment>Capistrano Capfile</comment>
+    <glob pattern="Capfile"/>
+  </mime-type>
+  <mime-type type="application/x-ruby">
     <comment>Ruby XML Template</comment>
     <glob pattern="*.rxml"/>
     <glob pattern="*.builder"/>
@@ -31,4 +35,3 @@
     <glob pattern="*.yml"/>
   </mime-type>
 </mime-info>
-
