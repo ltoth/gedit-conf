@@ -4,17 +4,22 @@ This repository should be cloned to @~/.gnome2/gedit@.
 
 Extra configuration steps:
 
-* Install gedit-plugins through apt-get
+* Install gedit-plugins, csstidy, git-core, gitk, pyqt4-dev-tools through apt-get
+
+pre. sudo apt-get install gedit-plugins csstidy git-core gitk pyqt4-dev-tools
+
+* Install git-cola from http://cola.tuxfamily.org/releases/release/
+
 * Select the following settings
-* View
-** Display line number
-** Highlight current line
-** Highlight matching bracket
-* Editor
-** Tab width: 2 (but don't enable Insert spaces instead of tabs because of elastictabstops plugin)
-** Enable automatic indentation
-* Font & Colors
-** Color Scheme: Railscasts
+** View
+*** Display line number
+*** Highlight current line
+*** Highlight matching bracket
+** Editor
+*** Tab width: 2 (but don't enable Insert spaces instead of tabs because of elastictabstops plugin)
+*** Enable automatic indentation
+** Font & Colors
+*** Color Scheme: Railscasts
 * Turn on desired plugins in Edit -> Preferences -> Plugins
 ** Class Browser
 ** Code comment
