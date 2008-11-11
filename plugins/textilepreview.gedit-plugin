@@ -1,0 +1,9 @@
+[Gedit Plugin]
+Loader=python
+Module=textilepreview
+IAge=2
+Name=Textile Preview
+Description=Show the HTML version of the Textile text you're editing
+Authors=Michele Campeotto <micampe@micampe.it>, Tom MacWright <macwright@gmail.c>
+Copyright=Copyright © 2006 Michele Campeotto, modified by Tom MacWright
+Website=http://micampe.it
