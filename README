@@ -21,8 +21,9 @@ pre. sudo apt-get install gedit-plugins csstidy git-core gitk pyqt4-dev-tools
 ** Font & Colors
 *** Color Scheme: Railscasts
 * Turn on desired plugins in Edit -> Preferences -> Plugins
-** Class Browser
+** Class Browser 0.3
 ** Code comment
+** Column mode
 ** Document Statistics
 ** Edit shortcuts
 *** add Ctrl+Shift+N -- open in new window
@@ -33,12 +34,11 @@ pre. sudo apt-get install gedit-plugins csstidy git-core gitk pyqt4-dev-tools
 *** change Ctrl+Alt+R -- Rails Hot Commands
 *** add Ctrl+Alt+W -- toggle text wrap
 ** Elastic tabstops
-** Elastic tabstop converter
 ** Embedded Terminal
 ** External Tools
 ** File Browser Pane
 ** Find In Files
-** HTML Tidy
+** Fullscreen
 ** Indent Lines
 ** Join/Split Lines
 ** Line Tools
@@ -56,8 +56,11 @@ pre. sudo apt-get install gedit-plugins csstidy git-core gitk pyqt4-dev-tools
 ** Snap Open
 ** Snippets
 ** Spell Checker
-** Text Tools
+** Textile Preview
+** Toggle text wrapping
+** Web Browser
 ** Word Completion
+** XML Helper
 * Set smaller pixel widths for Elastic Tabstops
 
 pre. gconftool-2 --type int --set /apps/gedit-2/plugins/elastictabstops/minimumwidth 15
