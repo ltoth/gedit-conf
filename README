@@ -19,7 +19,11 @@ Extra configuration steps:
 ** Class Browser
 ** Code comment
 ** Document Statistics
-** Edit shortcuts (add Ctrl+Shift+N -- open in new window)
+** Edit shortcuts
+*** add Ctrl+Shift+N -- open in new window
+*** change Ctrl+Alt+E -- XML helper end tag
+*** change Ctrl+Alt+M -- XML helper repeat tag
+*** change Ctrl+Alt+Shift+T -- Textile preview
 ** Elastic tabstops
 ** Elastic tabstop converter
 ** Embedded Terminal

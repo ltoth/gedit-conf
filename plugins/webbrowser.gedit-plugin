@@ -1,0 +1,9 @@
+[Gedit Plugin]
+Loader=python
+Module=webbrowser
+IAge=2
+Name=Web Browser
+Description=A Web Browser within Gedit
+Authors=sharkbaitbobby <sharkbaitbobby+gedit@gmail.com>
+Copyright=Copyright © 2008 sharkbaitbobby <sharkbaitbobby+gedit@gmail.com>
+Website=http://sharkbaitbobby.googlepages.com/gedit-webbrowser

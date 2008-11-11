@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# [Gedit Tool]
+# Comment=Git Diff
+# Name=Git diff
+# Shortcut=<Shift><Control><Alt>d
+# Applicability=all
+# Output=new-document
+# Input=nothing
+
+git diff

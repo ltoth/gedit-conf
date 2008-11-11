@@ -1,0 +1,10 @@
+[Gedit Plugin]
+Loader=python
+Module=columnmode
+IAge=2
+Name=Column Mode
+Description=Column-mode editing for gedit.
+Icon=gedit-plugin
+Authors=Stefan Schweizer <steve.schweizer@gmail.com>
+Copyright=Copyright © 2007 Stefan Schweizer
+Website=http://live.gnome.org/Gedit/Plugins/ColumnMode
