@@ -1,0 +1,9 @@
+[Gedit Plugin]
+Loader=python
+Module=elastictabstopsconverter
+IAge=2
+Name=Elastic tabstops converter
+Description=Convert between using spaces to align columns and elastic tabstops (for use with versions of Gedit that support elastic tabstops).
+Authors=Nick Gravgaard
+Copyright=Copyright © 2007 Nick Gravgaard
+Website=http://nickgravgaard.com/elastictabstops/

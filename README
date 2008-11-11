@@ -2,6 +2,7 @@ This repository should be cloned to ~/.gnome2/gedit.
 
 Extra configuration steps:
 
+* Install gedit-plugins through apt-get
 * Turn on desired plugins in Edit -> Preferences -> Plugins
 * For Rails mime-types
 
@@ -9,3 +10,5 @@ sudo cp rails.xml /usr/share/mime/packages/
 sudo cp *.lang /usr/share/gtksourceview-2.0/language-specs/
 sudo update-mime-database /usr/share/mime
 
+gconftool-2 --type int --set /apps/gedit-2/plugins/elastictabstops/minimumwidth 15
+gconftool-2 --type int --set /apps/gedit-2/plugins/elastictabstops/paddingwidth 10
