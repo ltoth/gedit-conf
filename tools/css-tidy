@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# [Gedit Tool]
+# Comment=CSS Tidy
+# Input=document
+# Name=CSS Tidy
+# Applicability=all
+# Output=replace-document
+
+FILE_MIME=`gnomevfs-info -s $GEDIT_CURRENT_DOCUMENT_PATH | awk '{FS=":"} /MIME type/ {gsub(/^[ \t]+|[ \t]+$/, "",$2); print $2}'`
+
+if [ $FILE_MIME = "text/css" ]; then
+	USE_TEMPLATE=`zenity --list --title="CSS Tidy" --text="Template to use" --radiolist --column="" --column="Template" FALSE high TRUE default FALSE low`
+	csstidy - --silent=true --sort_properties=true --template=$USE_TEMPLATE #| sed 's/{/ {/'
+else
+	cat -
+fi
+
+
+
+
+

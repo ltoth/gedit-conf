@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# [Gedit Tool]
+# Comment=Git Cola
+# Name=Git Cola
+# Shortcut=<Shift><Control>g
+# Applicability=all
+# Output=output-panel
+# Input=nothing
+
+EHOME=`echo $HOME | sed "s/#/\#/"`
+DIR=$GEDIT_CURRENT_DOCUMENT_DIR
+while test "$DIR" != "/"; do
+    if [ -d "${DIR}/.git" ]; then
+        echo "Using repository ${DIR}" | sed "s#$EHOME#~#" > /dev/stderr
+        git-cola --repo=$DIR &
+        exit
+    fi
+    DIR=`dirname "${DIR}"`
+done
+echo "No git repository found!" > /dev/stderr
+

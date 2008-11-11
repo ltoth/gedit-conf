@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# [Gedit Tool]
+# Comment=Remove useless trailing spaces in your file
+# Name=Remove trailing spaces
+# Applicability=all
+# Output=replace-document
+# Input=document
+
+sed 's/[[:blank:]]*$//'

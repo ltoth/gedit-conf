@@ -24,6 +24,9 @@ Extra configuration steps:
 *** change Ctrl+Alt+E -- XML helper end tag
 *** change Ctrl+Alt+M -- XML helper repeat tag
 *** change Ctrl+Alt+Shift+T -- Textile preview
+*** add Ctrl+Shift+I -- GeditDocInfoPluginActions/DocumentStatistics
+*** change Ctrl+Alt+R -- Rails Hot Commands
+*** add Ctrl+Alt+W -- toggle text wrap
 ** Elastic tabstops
 ** Elastic tabstop converter
 ** Embedded Terminal
